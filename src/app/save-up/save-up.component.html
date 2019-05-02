@@ -1,0 +1,61 @@
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input
+          id="original_price1"
+          type="text"
+          autocomplete="off"
+          [value]="original_price1"
+        >
+        <label for="original_price1">Original Price</label>
+      </div>
+      <div class="input-field col s6">
+        <input
+          id="percent"
+          type="text"
+          autocomplete="off"
+          [value]="percent"
+        >
+        <label for="percent">Percent</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input
+          id="budget_price"
+          type="text"
+          autocomplete="off"
+          [value]="budget_price"
+        >
+        <label for="budget_price">Budget Price</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input
+          id="original_price2"
+          type="text"
+          autocomplete="off"
+          [value]="original_price2"
+        >
+        <label for="original_price2">Original Price</label>
+      </div>
+      <div class="input-field col s6">
+        <input
+          id="reduced_price"
+          type="text"
+          autocomplete="off"
+          [value]="reduced_price"
+        >
+        <label for="reduced_price">Reduced Price</label>
+      </div>
+    </div>
+    <div class="halign-wrapper">
+      <button class="waves-effect waves-light btn center" (click)="onClick()" type="button">Save!</button>
+    </div>
+  </form>
+
+</div>
+
