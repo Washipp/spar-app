@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TotalSaveUpComponent } from './total-save-up/total-save-up.component';
-import {AccountDbService} from './account-db.service';
+import { AccountDbService } from './account-db.service';
 import { SaveUpComponent } from './save-up/save-up.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SaveUpComponent } from './save-up/save-up.component';
     SaveUpComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [AccountDbService],
   bootstrap: [AppComponent]

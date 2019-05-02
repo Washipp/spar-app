@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
+import {SavedAmount} from '../saved-amount';
 
 @Component({
   selector: 'app-save-up',
@@ -7,15 +8,11 @@ import {Component, Input} from '@angular/core';
 })
 export class SaveUpComponent {
 
-  @Input('original_price1') original_price1: number;
-  @Input('percent') percent: number;
-  @Input('budget_price') budget_price: number;
-  @Input('original_price2') original_price2: number;
-  @Input('reduced_price') reduced_price: number;
+  model = new SavedAmount(0, 0, 0, 0);
 
   constructor() { }
 
-  onClick() {
-    console.log("test");
+  onSubmit(element) {
+    console.log(this.model);
   }
 }
