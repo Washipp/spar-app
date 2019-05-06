@@ -8,11 +8,11 @@ import {SavedAmount} from '../saved-amount';
 })
 export class SaveUpComponent {
 
-  model = new SavedAmount(0, 0, 0, 0);
+  model = new SavedAmount();
 
   constructor() { }
 
-  onSubmit(element) {
+  onSubmit() {
     console.log(this.model);
   }
 }

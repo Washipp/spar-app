@@ -6,12 +6,14 @@ import { TotalSaveUpComponent } from './total-save-up/total-save-up.component';
 import { AccountDbService } from './account-db.service';
 import { SaveUpComponent } from './save-up/save-up.component';
 import { FormsModule } from '@angular/forms';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TotalSaveUpComponent,
-    SaveUpComponent
+    SaveUpComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
