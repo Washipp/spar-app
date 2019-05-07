@@ -2,25 +2,19 @@
 <div class="row">
   <form class="col s12" (ngSubmit)="onSubmit()">
     <div class="row">
-      <div class="input-field col s12">
+      <div class="input-field col s6">
         <label for="originalPrice">Original Price</label>
-        <input id="originalPrice" type="text" autocomplete="off"
+        <input id="originalPrice" type="text" autocomplete="off" class="money"
                #originalPrice="ngModel"
+               currencyMask [options]="{ align: 'left', prefix: 'CHF ', thousands: '\'', decimal: '.' }"
                [(ngModel)]="model.originalPrice" name="originalPrice">
       </div>
-    </div>
-    <div class="row">
       <div class="input-field col s6">
         <label for="percent">Percent</label>
-        <input id="percent" type="text" autocomplete="off"
+        <input id="percent" type="text" autocomplete="off" class="money" max="100" maxlength="3"
                #percent="ngModel"
-               ngModel [(ngModel)]="model.percent" name="percent">
-      </div>
-      <div class="input-field col s6">
-        <label for="reducedPrice">Reduced Price</label>
-        <input id="reducedPrice" type="text" autocomplete="off"
-               #reducedPrice="ngModel"
-               ngModel [(ngModel)]="model.reducedPrice" name="reducedPrice">
+               currencyMask [options]="{ align: 'left', prefix: '',suffix: '%', thousands: '\'', decimal: '.', precision: '0' }"
+               [(ngModel)]="model.percent" name="percent">
       </div>
     </div>
     <div class="row">
@@ -28,7 +22,8 @@
         <label for="budgetPrice">Budget Price</label>
         <input id="budgetPrice" type="text" autocomplete="off"
                #budgetPrice="ngModel"
-               ngModel [(ngModel)]="model.budgetPrice" name="budgetPrice">
+               currencyMask [options]="{ align: 'left', prefix: 'CHF ', thousands: '\'', decimal: '.' }"
+               [(ngModel)]="model.budgetPrice" name="budgetPrice">
       </div>
     </div>
     <div class="center-align">
@@ -44,7 +39,6 @@
           </div>
         </div>
       </div>
-
 
       <button class="waves-effect waves-light btn" type="submit">Save!</button>
     </div>

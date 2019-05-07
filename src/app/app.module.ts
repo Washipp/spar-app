@@ -7,6 +7,7 @@ import { AccountDbService } from './account-db.service';
 import { SaveUpComponent } from './save-up/save-up.component';
 import { FormsModule } from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavigationComponent } from './navigation/navigation.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CurrencyMaskModule
   ],
   providers: [AccountDbService],
   bootstrap: [AppComponent]
