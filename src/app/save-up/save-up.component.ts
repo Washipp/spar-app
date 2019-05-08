@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {SavedAmount} from '../saved-amount';
+import {AccountDbService} from '../account-db.service';
 
 @Component({
   selector: 'app-save-up',
@@ -9,10 +10,13 @@ import {SavedAmount} from '../saved-amount';
 export class SaveUpComponent {
 
   model = new SavedAmount();
+  service;
 
-  constructor() { }
+  constructor(db: AccountDbService) {
+    this.service = db;
+  }
 
   onSubmit() {
-    console.log(this.model);
+    this.service.setTotal(this.model.getSavedAmount());
   }
 }

@@ -12,4 +12,8 @@ export class SavedAmount {
       return this.budgetPrice;
     }
   }
+
+  isSavable() {
+    return typeof this.getSavedAmount() !== 'undefined' && this.getSavedAmount() > 0;
+  }
 }

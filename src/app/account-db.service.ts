@@ -1,13 +1,17 @@
-/*import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})*/
 export class AccountDbService {
 
+  private savedUpKey = 'savedAmount';
   constructor() { }
 
-  getTotal() {
-    return 12;
+  setTotal(value) {
+    if (!isNaN(Number(value))) {
+      console.log('Saving value ', value);
+      localStorage.setItem(this.savedUpKey, String(this.getTotal() + value));
+    }
   }
+
+  getTotal() {
+    return Number(localStorage.getItem(this.savedUpKey));
+  }
+
 }

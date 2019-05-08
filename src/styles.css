@@ -5,9 +5,7 @@
   background: #fff;
 }
 
-.highlighted-box {
-
-}
 .amount-saved {
-  text-align: center;
+  font-size: 1.3rem;
+  padding-right: 10px;
 }
