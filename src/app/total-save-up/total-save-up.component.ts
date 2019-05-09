@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, HostListener} from '@angular/core';
+import {Component} from '@angular/core';
 import {AccountDbService} from '../account-db.service';
 
 @Component({
@@ -6,30 +6,18 @@ import {AccountDbService} from '../account-db.service';
   templateUrl: './total-save-up.component.html',
   styleUrls: ['./total-save-up.component.css']
 })
-export class TotalSaveUpComponent implements AfterViewInit {
+export class TotalSaveUpComponent {
 
   totalSaved: number;
   private service;
 
-  constructor(db: AccountDbService, private elementRef: ElementRef) {
+  constructor(db: AccountDbService) {
     this.service = db;
     this.updateTotalSaved();
   }
 
 
   updateTotalSaved() {
-    console.log('Eventlistener Update');
     this.totalSaved = this.service.getTotal();
-  }
-
-  ngAfterViewInit() {
-    this.elementRef.nativeElement.querySelector('button').getElementById('app-save-up').addEventListener('storage', () => {
-      this.updateTotalSaved();
-    });
-  }
-
-
-  @HostListener('storage') onMouseOver() {
-    this.updateTotalSaved();
   }
 }

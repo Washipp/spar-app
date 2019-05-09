@@ -18,5 +18,6 @@ export class SaveUpComponent {
 
   onSubmit() {
     this.service.setTotal(this.model.getSavedAmount());
+    this.model = new SavedAmount();
   }
 }
