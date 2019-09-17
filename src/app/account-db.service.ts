@@ -14,4 +14,8 @@ export class AccountDbService {
     return Number(localStorage.getItem(this.savedUpKey));
   }
 
+  deleteTotal() {
+    localStorage.clear();
+  }
+
 }

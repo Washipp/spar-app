@@ -8,3 +8,11 @@
   text-align: center;
   font-size: 2rem;
 }
+
+.delete-total-saved {
+  margin-top: 5%;
+}
+
+.delete-total-saved a {
+  color: lightgray;
+}

@@ -20,4 +20,11 @@ export class TotalSaveUpComponent {
   updateTotalSaved() {
     this.totalSaved = this.service.getTotal();
   }
+
+  resetTotalSaved() {
+    if (confirm('Are you sure you want to delete your saved up money?')) {
+      this.service.deleteTotal();
+      this.updateTotalSaved();
+    }
+  }
 }
