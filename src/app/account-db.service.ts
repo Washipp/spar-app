@@ -1,6 +1,10 @@
+import {Injectable} from '@angular/core';
+
+@Injectable()
 export class AccountDbService {
 
   private savedUpKey = 'savedAmount';
+
   constructor() { }
 
   setTotal(value) {

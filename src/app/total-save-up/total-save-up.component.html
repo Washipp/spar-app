@@ -15,3 +15,14 @@
 <div class="center-align delete-total-saved">
   <a (click)="resetTotalSaved()" routerLink="/home">Reset Total Saved!</a>
 </div>
+<a class="waves-effect waves-light btn modal-trigger" href="#deleteTotalSavedModal">Reset Total Saved!</a>
+<div class="modal" id="deleteTotalSavedModal">
+  <div class="modal-content">
+    <h4>Confirmation</h4>
+    <p>Are you sure you want to delete your saved up money?</p>
+  </div>
+  <div class="modal-footer">n
+    <a class="modal-close waves-effect waves-green btn-flat" routerLink="/home">Disgree</a>
+    <a (click)="resetTotalSaved()" class="modal-close waves-effect waves-green btn-flat" routerLink="/home">Agree</a>
+  </div>
+</div>

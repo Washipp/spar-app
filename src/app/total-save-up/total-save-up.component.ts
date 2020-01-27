@@ -14,6 +14,11 @@ export class TotalSaveUpComponent {
   constructor(db: AccountDbService) {
     this.service = db;
     this.updateTotalSaved();
+    /** Initialize Delete Modal
+     document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });**/
   }
 
 
@@ -22,9 +27,7 @@ export class TotalSaveUpComponent {
   }
 
   resetTotalSaved() {
-    if (confirm('Are you sure you want to delete your saved up money?')) {
-      this.service.deleteTotal();
-      this.updateTotalSaved();
-    }
+    this.service.deleteTotal();
+    this.updateTotalSaved();
   }
 }
